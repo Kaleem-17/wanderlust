@@ -1,0 +1,89 @@
+<% layout("/layouts/boilerplate") %>
+<br />
+<div class="row">
+  <div class="col-8 offset-2">
+    <h3>Create a New Listing</h3>
+    <form
+      action="/listing"
+      method="post"
+      novalidate
+      class="needs-validation"
+      enctype="multipart/form-data"
+    >
+      <!-- title div -->
+      <div class="mb-3">
+        <label for="title">Title</label>
+        <input
+          type="text"
+          name="Listing[title]"
+          placeholder="enter the title"
+          class="form-control"
+          required
+        />
+        <div class="invalid-feedback">Title is required</div>
+      </div>
+      <!-- description div -->
+      <div class="mb-3">
+        <label for="description">Description</label>
+        <textarea
+          name="Listing[description]"
+          placeholder="enter the description"
+          class="form-control"
+          required
+        ></textarea>
+        <div class="invalid-feedback">Description is required</div>
+      </div>
+      <!-- // image link div -->
+      <div class="mb-3">
+        <label for="image">Upload image</label>
+        <input
+          type="file"
+          name="Listing[image]"
+          class="form-control"
+          required
+        />
+      </div>
+      <!-- // price div -->
+      <div class="row">
+        <div class="mb-3 col-md-4">
+          <label for="price">Price</label>
+          <input
+            type="text"
+            name="Listing[price]"
+            placeholder="enter your price"
+            class="form-control"
+            required
+          />
+          <div class="invalid-feedback">Price is required</div>
+        </div>
+        <!-- // country div -->
+        <div class="mb-3 col-md-8">
+          <label for="country">Country</label>
+          <input
+            type="text"
+            name="Listing[country]"
+            placeholder="enter the country"
+            class="form-control"
+            required
+          />
+          <div class="invalid-feedback">Country is required</div>
+        </div>
+      </div>
+
+      <!-- // location div -->
+      <div class="mb-3">
+        <label for="location">Location</label>
+        <input
+          type="text"
+          name="Listing[location]"
+          placeholder="enter the location"
+          class="form-control"
+          required
+        />
+        <div class="invalid-feedback">Location is required</div>
+      </div>
+      <button type="submit" class="btn add-btn">Add</button>
+      <br /><br />
+    </form>
+  </div>
+</div>
