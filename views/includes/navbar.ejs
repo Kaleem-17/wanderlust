@@ -47,7 +47,7 @@
           <a class="nav-link" href="/listing/new"><b>Become a host</b></a>
         </li>
         
-        <% if(!currentUser){ %>
+        <% if(!currentUser && currentUser !== "undefined"){ %>
           <li class="nav-item d-flex gap-2">
             <a class="btn btn-success" href="/signup">Sign Up</a>
             <a class="btn btn-success" href="/login">Log In</a>
